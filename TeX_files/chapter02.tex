@@ -1,0 +1,110 @@
+\Exo{Palindromes binaires}{Lyon}{2017}{2}
+
+\partie{1}
+
+\subExo 1
+\begin{equation*}
+	\begin{split}
+		135 & = 128 + 4 + 2 + 1 \\
+		    & = 2^7 + 2^2 + 2^1 + 2^0 \\
+		    & = (10000111)_2
+	\end{split}
+\end{equation*}
+Le nombre $135$ se note donc $10000111$ dans le système binaire.
+
+\subExo 2
+\begin{equation*}
+	\begin{split}
+		(101011)_2 & = 2^5 + 2^3 + 2^1 + 2^0 \\
+				   & = 32 + 8 + 2 + 1 \\
+				   & = 43
+	\end{split}
+\end{equation*}
+Donc $101011$ en binaire est $43$ en décimal.
+
+\subExo 3\subsubExo{a}
+Cas $N=6$:\par
+Le reste de la division euclidienne de $N$ par $2$\footnote{noté par la suite $N\mod 2$} est $0$. $0$ est donc affiché.
+Ensuite, on affecte à $N$ $6 \div 2 = 3$\footnote{Le quotient de la division euclidienne de $6$ par $2$}. On affiche $3 \mod 2 = 1$ et on affecte à $N$ $3\div 2 = 1$, puis on affiche $1 \mod 2 = 0$ et on affecte à $N$ $1 \div 2 = 0$. Comme $N = 0$. Le programme s'arrête.
+
+Les nombres affichés sont donc $0, 1, 1$. \newline
+
+Cas $N=53$ :\par
+
+Les nombres affichés sont $1,0,1,0,1,1$
+
+\subsubExo b
+On sait que $6 = (110)_2$ et $53=(110101)_2$. On en conclut que le programme affiche les chiffre de $N$ converti en binaire à l'envers.
+
+\subExo 4
+On note $n$ le nombre de chiffres dans un nombre et $p$ la place d'un chiffre dans un nombre. On a : TODO : Preuve
+
+\[2^n = (\sum_{p=1}^n 2^{n-p})+1\]
+
+Or,
+\begin{equation*}
+	\begin{split}
+		\underbrace{(111\dots1)_2}_{\text{$n$ fois}} & = 2^{n-1} + 2^{n-2}\dots2^{n-n} \\
+				& = \sum_{p=1}^n 2^{n-p}
+	\end{split}
+\end{equation*}
+
+On a donc bien $\underbrace{(111\dots1)_2}_{\text{$n$ fois}} = 2^n - 1$.
+
+\subExo 5
+On a autant de couleurs possibles sur $24$ bits que de nombre que l'on peut créer avec ces $24$ bits. Or, on a $2^{24} =16\,777\,216$ combinaisons différentes. On peut donc créer $16\,777\,216$ couleurs différentes avec ce système.
+
+\vspace{3em}
+\partie 2
+
+\subExo {1}
+Les années palindromes binaires entre $1$ et $129$ sont :
+\begin{equation*}
+	\begin{split}
+		1 & = (1)_2 \\
+		3 & = (11)_2 \\
+		5 & = (101)_2 \\
+		7 & = (111)_2 \\
+		9 & = (1001)_2 \\
+		15 & = (1111)_2 \\
+		17 & = (10001)_2 \\
+		21 & = (10101)_2 \\
+		27 & = (11011)_2 \\
+		31 & = (11111)_2 \\
+		33 & = (100001)_2 \\
+		45 & = (101101)_2 \\
+		51 & = (110011)_2 \\
+		63 & = (111111)_2 \\
+		65 & = (1000001)_2 \\
+		73 & = (1001001)_2 \\
+		85 & = (1010101)_2 \\
+		93 & = (1011101)_2 \\
+		99 & = (1100011)_2 \\
+		107 & = (1101011)_2 \\
+		119 & = (1110111)_2 \\
+		127 & = (1111111)_2 \\
+		129 & = (10000001)_2
+	\end{split}
+\end{equation*}
+
+\subExo 2
+$2017 = (11111100001)_2$. Ce nombre n'est donc un palindrome binaire, car retourné il vaut $7231$
+
+\subExo 3
+La prochaine année palidrome binaire est $2047 = (11111111111)_2$
+
+\subExo 4
+On utilise les résultats du 1.
+
+\begin{itemize}
+	\item Palindromes à 3 chiffres : $2$ ($101$, $111$)
+	\item Palindromes à 4 chiffres : $2$ ($1001$, $1111$)
+	\item Palindromes à 5 chiffres : $4$ ($10001$, $10101$, $11011$, $11111$)
+	\item Palindromes à 6 chiffres : $4$ ($100001$, $101101$, $110011$, $111111$)
+	\item Palindromes à 7 chiffres : $8$ ($1000001$, $1001001$, $1010101$, $1011101$, $1100011$, $1101011$, $1110111$, $1111111$)
+\end{itemize}
+
+\subExo{5}
+\subsubExo{a}
+
+TODO: Finir l'exo

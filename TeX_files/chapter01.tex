@@ -1,0 +1,84 @@
+\Exo{Le fonctionnement d'un ordinateur}{Amiens}{2017}{4}
+
+
+\subExo 1
+\begin{center}
+	\begin{tabular}{|c | c | c | c|} 
+		\hline
+		Action & $P_1$ & $P_2$ & Résultat \\ 
+		\hline
+		Situation initiale & $[a,b,c]$ & $[d,e]$ & Aucun \\ 
+		\hline
+		Lire $P_1$ & $[a,b,c]$ & $[d,e]$ & $c$ \\
+		\hline
+		Transfert de $P_1$ vers $P_2$ & $[a,b]$ & $[d,e,c]$ & Aucun \\
+		\hline
+		Dépiler $P_1$ & $[a]$ & $[d,e,c]$ & Aucun \\
+		\hline
+		Empiler la donnée "$f$" sur $P_1$ & $[a,f]$ & $[d,e,c]$ & Aucun \\
+		\hline
+		Transfert de $P_2$ vers $P_1$ & $[a,f,c]$ & $[d,e]$ & Aucun \\
+		\hline
+		Lire $P_2$ & $[a,f,c]$ & $[d,e]$ & $e$\\
+		\hline
+	\end{tabular}
+\end{center}
+
+\subExo 2
+Soit $P_1 = [a,b,c]$
+
+On ne peut pas lire $b$ sans recourir à une autre pile ni perdre des données : Il faut d'abord enlever $c$ soit avec "Transfert de $P_1$ vers $P_2$" soit avec "Dépiler $P_1$" avant de "Lire $P_1$", ce qui est à l'encontre des conditions.
+
+\subExo 3
+Dans ce cas, on peut commencer par faire "Transfert de $P_1$ vers $P_2$", ce qui donne\footnote{Si $P_2$ est vide} :
+
+\[P_1 = [a,b]\]
+\[P_2 = [c]\]
+
+On peut alors "Lire $P_1$", ce qui donne $b$.
+
+\subExo 4
+Soient $P_1 = [a,b]$, $P_2 = []$, $P_3=[]$
+
+\begin{center}
+	\begin{tabular}{| c | c | c | c |}
+		\hline
+		Action & \pun & \pdeux & \ptrois \\
+		\hline
+		Situation initiale & $[a,b]$ & $[]$ & $[]$ \\
+		\hline
+		Transfert de \pun vers \ptrois & $[a]$ & $[]$ & $[b]$ \\
+		\hline
+		Transfert de \pun vers \pdeux & $[]$ & $[a]$ & $[b]$ \\
+		\hline
+		Transfert de \ptrois vers \pun & $[b]$ & $[a]$ & $[]$ \\
+		\hline
+		Transfert de \pdeux vers \pun & $[b,a]$ & $[]$ & $[]$ \\
+		\hline
+	\end{tabular}
+\end{center}
+
+\subExo 4
+\begin{center}
+	\begin{tabular}{| c | c | c | c |}
+		\hline
+		Action & \pun & \pdeux & \ptrois \\
+		\hline
+		Situation initiale & $[a,b,c]$ & $[]$ & $[]$ \\
+		\hline
+		Transfert de \pun vers \ptrois & $[a,b]$ & $[]$ & $[c]$ \\
+		\hline
+		Transfert de \pun vers \pdeux & $[a]$ & $[b]$ & $[c]$ \\
+		\hline
+		Transfert de \pun vers \pdeux & $[]$ & $[b, a]$ & $[c]$ \\
+		\hline
+		Transfert de \ptrois vers \pun & $[c]$ & $[b,a]$ & $[]$ \\
+		\hline
+		Transfert de \pdeux vers \ptrois & $[c]$ & $[b]$ & $[a]$ \\
+		\hline
+		Transfert de \pdeux vers \pun & $[c,b]$ & $[]$ & $[a]$ \\
+		\hline
+		Transfert de \ptrois vers \pun & $[c,b,a]$ & $[]$ & $[]$ \\
+		\hline
+	\end{tabular}
+\end{center}

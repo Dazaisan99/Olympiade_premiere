@@ -1,0 +1,47 @@
+\documentclass[a4paper,12pt, titlepage]{book}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{amsmath}
+
+
+\pagenumbering{arabic}
+\pagestyle{fancy}
+\fancyhf{}%clear all headers and footers
+\fancyhead[LE]{\slshape \leftmark}
+\fancyhead[RO]{\slshape}
+\fancyhead[LO,RE]{\arabic{page}}
+
+\newcommand{\Exo}[4]{\chapter[#2 #3 - Exercice #4]{\textit{#1} \newline \normalsize{#2 #3 - Exercice #4}}}
+
+\newcommand{\subExo}[1]{{\raggedleft\bfseries\large{#1.}}}
+
+\newcommand{\subsubExo}[1]{{\raggedleft\bfseries\large{#1})}}
+
+\newcommand{\partie}[1]{{\bfseries\Large{Partie #1}} \newline}
+
+\newcommand{\pun}{$P_1$}
+\newcommand{\pdeux}{$P_2$}
+\newcommand{\ptrois}{$P_3$}
+
+\renewcommand{\thesection}{\arabic{section}.}
+
+\renewcommand{\thesubsection}{\thesection\alph{subsection})}
+
+\begin{document}
+	
+\renewcommand{\chaptername}{Exercice}
+
+\author{Pierre GALLOIS}
+\title{Mes solutions aux Olympiades de Première}
+
+\maketitle
+
+\setcounter{tocdepth}{0}
+\tableofcontents
+
+\include{./TeX_files/chapter01}
+\include{./TeX_files/chapter02}
+
+\end{document}
